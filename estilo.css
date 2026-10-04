@@ -1,0 +1,76 @@
+/* Fondo general */
+body {
+    background-color: #f5e6ff;
+    color: #5a3d6e;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Título */
+h1 {
+    color: #e91e8c;
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(233, 30, 140, 0.2);
+}
+
+/* Párrafos */
+p {
+    font-size: 19px;
+    color: #6b4c7a;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Imágenes */
+.chiikawa {
+    display: block;
+    margin: 20px auto 30px auto;
+    width: 170px;
+    border-radius: 18px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ========== BURBUJAS ROSAS ========== */
+
+.burbuja {
+    position: fixed;
+    bottom: -100px;
+    background: radial-gradient(circle at 30% 30%, #ff9ec7, #ff6b9d);
+    border-radius: 50%;
+    opacity: 0.55;
+    animation: subir 12s infinite ease-in;
+    z-index: 1;
+}
+
+/* Diferentes tamaños y posiciones */
+.burbuja:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 11s; }
+.burbuja:nth-child(2) { width: 25px; height: 25px; left: 25%; animation-duration: 14s; animation-delay: 1s; }
+.burbuja:nth-child(3) { width: 55px; height: 55px; left: 40%; animation-duration: 13s; animation-delay: 2s; }
+.burbuja:nth-child(4) { width: 30px; height: 30px; left: 60%; animation-duration: 10s; animation-delay: 0.5s; }
+.burbuja:nth-child(5) { width: 45px; height: 45px; left: 75%; animation-duration: 15s; animation-delay: 3s; }
+.burbuja:nth-child(6) { width: 20px; height: 20px; left: 90%; animation-duration: 12s; animation-delay: 1.5s; }
+
+/* Animación de las burbujas subiendo y moviéndose */
+@keyframes subir {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.55;
+    }
+    50% {
+        transform: translateY(-50vh) translateX(30px);
+    }
+    100% {
+        transform: translateY(-110vh) translateX(-20px);
+        opacity: 0;
+    }
+}
